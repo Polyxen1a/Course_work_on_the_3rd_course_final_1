@@ -18,6 +18,8 @@ public interface FileService {
 
     InputStreamResource exportFile() throws FileNotFoundException;
 
+    InputStreamResource exportOperation(String json) throws FileNotFoundException;
+
     void importFile(MultipartFile file) throws FileNotFoundException;
 
     String importOperations(MultipartFile file) throws FileNotFoundException;

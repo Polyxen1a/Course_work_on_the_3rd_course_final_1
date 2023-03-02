@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import pro.sky.course_work_on_the_3rd_course_final_1.exception.FileProcessingException;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -17,7 +18,7 @@ import java.nio.file.Path;
 
 public abstract class SocksFileServiceImpl implements FileService {
 
-    @Value("src/main/resourses")
+    @Value("src/main/resources")
     private String dataFilePath;
     @Value("socks.json")
     private String dataFileName;

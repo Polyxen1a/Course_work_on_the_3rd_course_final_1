@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import pro.sky.course_work_on_the_3rd_course_final_1.dto.SockShippingDto;
+import pro.sky.course_work_on_the_3rd_course_final_1.exception.FileProcessingException;
 import pro.sky.course_work_on_the_3rd_course_final_1.model.Color;
 import pro.sky.course_work_on_the_3rd_course_final_1.model.SocksSize;
 import pro.sky.course_work_on_the_3rd_course_final_1.service.FileService;
@@ -70,7 +71,7 @@ public class SocksController {
 
     @PostMapping(value = "/import", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @Operation(description = "Импорт файла")
-    public ResponseEntity<Void> uploadDataFile(MultipartFile file) throws FileNotFoundException {
+    public ResponseEntity<Void> uploadDataFile(MultipartFile file) throws FileNotFoundException, FileProcessingException {
         sockService.importFile(file);
         return ResponseEntity.ok().build();
     }

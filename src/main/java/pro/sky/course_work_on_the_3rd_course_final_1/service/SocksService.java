@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 import pro.sky.course_work_on_the_3rd_course_final_1.dto.SockShippingDto;
 import pro.sky.course_work_on_the_3rd_course_final_1.dto.SocksMapper;
 import pro.sky.course_work_on_the_3rd_course_final_1.exception.EmptyStockException;
+import pro.sky.course_work_on_the_3rd_course_final_1.exception.FileProcessingException;
 import pro.sky.course_work_on_the_3rd_course_final_1.model.Color;
 import pro.sky.course_work_on_the_3rd_course_final_1.model.Sock;
 import pro.sky.course_work_on_the_3rd_course_final_1.model.SocksSize;
