@@ -60,7 +60,7 @@ public class SocksController {
 
     @GetMapping("/export")
     @Operation(description = "Экспорт файла")
-    public ResponseEntity<InputStreamResource> downloadFile() throws IOException {
+    public ResponseEntity downloadFile() throws IOException, FileProcessingException {
         InputStreamResource inputStreamResource = sockService.exportFile();
         return ResponseEntity.ok()
                 .contentType(MediaType.APPLICATION_JSON)
